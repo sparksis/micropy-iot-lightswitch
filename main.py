@@ -11,6 +11,7 @@ def connectToWifiAndUpdate():
     if not sta_if.isconnected():
         print('connecting to network...')
         sta_if.active(True)
+        sta_if.config(dhcp_hostname='mircopy-iot-lightswitch')
         sta_if.connect(secrets.WIFI_SSID, secrets.WIFI_PASSWORD)
         while not sta_if.isconnected():
             pass
@@ -24,7 +25,8 @@ def connectToWifiAndUpdate():
         gc.collect()
 
 def startApp():
-    import app.start
+    print('noop')
+    # import app.start
 
 
 connectToWifiAndUpdate()
