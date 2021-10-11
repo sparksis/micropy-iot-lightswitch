@@ -25,8 +25,8 @@ def connectToWifiAndUpdate():
         gc.collect()
 
 def startApp():
-    print('noop')
-    # import app.start
+    # print('noop')
+    import app.start
 
 
 connectToWifiAndUpdate()
